@@ -1,0 +1,12 @@
+<ul>
+<li data-bind-class="status">
+<h1 class="title" data-bind="title"></h1>
+<h3 data-bind="criticals"></h3>
+<h4 data-showif="criticals | equals 1">critical</h4>
+<h4 data-hideif="criticals | equals 1">criticals</h4>
+<h3 data-bind="warnings"></h3>
+<h4 data-showif="warnings | equals 1">warning</h4>
+<h4 data-hideif="warnings | equals 1">warnings</h4>
+<p class="updated-at" data-bind="updatedAtMessage"></p>
+</li>
+</ul>

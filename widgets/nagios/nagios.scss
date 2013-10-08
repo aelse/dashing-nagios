@@ -1,0 +1,61 @@
+$background: #444;
+$text: #fff;
+$success: #86d751;
+$warning: #edde43;
+$failure: #e3394f;
+
+.widget-nagios {
+  li {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 25px;
+
+    h3 {
+      font-size: 60px;
+      font-weight: bold;
+    }
+  
+    h4 {
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    p &.updated-at {
+      font-size: 10px;
+    }
+  
+    &.green {
+      background-color: $success;
+
+      p {
+        &.updated-at {
+          color: lighten($success, 20%);
+        }
+      }
+    }
+
+    &.yellow {
+      background-color: $warning;
+
+      p {
+        &.updated-at {
+          color: lighten($warning, 20%);
+        }
+      }
+    }
+
+    &.red {
+      background-color: $failure;
+
+      p {
+        &.updated-at {
+          color: lighten($failure, 20%);
+        }
+      }
+    }
+  }
+}

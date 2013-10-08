@@ -11,6 +11,9 @@ Configuration
 Copy the contents of jobs and widgets directories to your dashing
 installation. You may also copy the sample nagios dashboard if you wish.
 
+Add the content of Gemfile.nagios to your dashing Gemfile and run
+`bundle install` to install dependencies.
+
 Edit jobs/nagios.rb and change the URL, username and password of your
 Nagios server.
 

@@ -9,7 +9,7 @@ SCHEDULER.every '30s' do
 
   environments.each do |key, env|
     nag = NagiosHarder::Site.new(env[:url], env[:username], env[:password])
-    unacked = nag.service_status(:service_status_types => [:warning, :critical], :service_props => [:no_scheduled_downtime, :state_unacknowledged, :checks_enabled])
+    unacked = nag.service_status(:host_status_types => [:all], :service_status_types => [:warning, :critical], :service_props => [:no_scheduled_downtime, :state_unacknowledged, :checks_enabled])
 
     critical_count = 0
     warning_count = 0

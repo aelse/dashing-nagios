@@ -8,7 +8,7 @@ This repo contains the nagios widget, a sample dashboard using the nagios widget
 Configuration
 =============
 
-Copy the contents of jobs, assets and widgets directories to your dashing
+Copy the contents of jobs and widgets directories to your dashing
 installation. You may also copy the sample nagios dashboard if you wish.
 
 Add the content of Gemfile.nagios to your dashing Gemfile and run

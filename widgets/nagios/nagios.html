@@ -1,6 +1,10 @@
 <ul>
 <li data-bind-class="status">
 <h1 class="title" data-bind="title"></h1>
+<div data-showif="status | equals 'error'"> <!-- error -->
+  <h3>Error querying Nagios</h3>
+</div> <!-- /no error -->
+<div data-hideif="status | equals 'error'"> <!-- no error -->
 <div data-showif="criticals | equals 0 | and warnings | equals 0"> <!-- no problem -->
   <div data-showif="warnings | equals 0">
       <img width="30%" alt="" src="/assets/dashing-nagios-thumbs-up.png">
@@ -15,5 +19,6 @@
   <h4 data-hideif="warnings | equals 1">warnings</h4>
   <p class="updated-at" data-bind="updatedAtMessage"></p>
 </div> <!-- /problem -->
+</div> <!-- /no error -->
 </li>
 </ul>

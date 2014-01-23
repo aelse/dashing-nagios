@@ -3,6 +3,7 @@ $text: #fff;
 $success: #86d751;
 $warning: #edde43;
 $failure: #e3394f;
+$error: #f75f00;
 
 .widget-nagios {
   li {
@@ -54,6 +55,16 @@ $failure: #e3394f;
       p {
         &.updated-at {
           color: lighten($failure, 20%);
+        }
+      }
+    }
+
+    &.error {
+      background-color: $error;
+
+      p {
+        &.updated-at {
+          color: lighten($error, 20%);
         }
       }
     }

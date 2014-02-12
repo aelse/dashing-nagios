@@ -1,1 +1,1 @@
-gem 'nagiosharder', :git => 'https://github.com/railsmachine/nagiosharder.git', :ref => 'eb09a864'
+gem 'nagiosharder', :git => 'https://github.com/railsmachine/nagiosharder.git'

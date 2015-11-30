@@ -11,5 +11,5 @@
       <div data-id="nagios-dev" data-view="Nagios" data-unordered="true" data-title="Nagios Dev" data-moreinfo="Unacknowledged events"></div>
     </li>
   </ul>
-  <center><div style="font-size: 12px">Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "criticals": "0", "warnings": "1", "status": "yellow" }' \http://<%=request.host%>:<%=request.port%>/widgets/nagios-prod</div></center>
+  <center><div style="font-size: 12px">Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "criticals": 0, "warnings": 1, "status": "yellow" }' \http://<%=request.host%>:<%=request.port%>/widgets/nagios-prod</div></center>
 </div>

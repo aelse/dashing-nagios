@@ -21,17 +21,21 @@ SCHEDULER.every '30s' do
       end
     end
   
-    status = critical_count > 0 ? "red" : (warning_count > 0 ? "yellow" : "green")
-
     # nagiosharder may not alert us to a problem querying nagios.
     # If no problems found check that we fetch service status and
     # expect to find more than 0 entries.
+    error = false
     if critical_count == 0 and warning_count == 0
       if nag.service_status.length == 0
-        status = "error"
+        error = true
       end
     end
   
-    send_event('nagios-' + key.to_s, { criticals: critical_count, warnings: warning_count, status: status })
+    if error
+      # Send an empty payload, which the widget treats as an error
+      send_event('nagios-' + key.to_s, { })
+    else
+      send_event('nagios-' + key.to_s, { criticals: critical_count, warnings: warning_count })
+    end
   end
 end
